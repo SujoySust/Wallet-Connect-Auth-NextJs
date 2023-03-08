@@ -19,9 +19,6 @@ const AddWalletComponent = () => {
     (state: RootState) => state.chains.supportedChains
   );
 
-  console.log(supportedChains);
-  
-
   const wallets = [
     {
       id: 1,
@@ -84,20 +81,6 @@ const AddWalletComponent = () => {
                 {t("You're connected to")} <p>{account}</p>
               </div>
             )}
-
-            {/* {walletConnected(active) && (
-              <>
-                <div className="col-12">
-                  <button
-                    type="button"
-                    className={classes.singleWallet + " bg-success text-white"}
-                    onClick={handleSignMessage}
-                  >
-                    Sign Message
-                  </button>
-                </div>
-              </>
-            )} */}
           </div>
         </div>
       </div>

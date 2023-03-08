@@ -18,12 +18,6 @@ export const SettingsContent = ({ userData }: any) => {
       tab: t("profile"),
       content: <ProfileContent userData={userData} />,
     },
-    {
-      icon: <BiShieldQuarter />,
-      title: t("Account Support"),
-      tab: t("account-support"),
-      content: <AccountSupportSettings />,
-    },
   ];
 
   return (

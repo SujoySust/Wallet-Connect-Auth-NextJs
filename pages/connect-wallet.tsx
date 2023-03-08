@@ -10,19 +10,9 @@ import BreadCrumbSection from "../sections/BreadCrumbSection";
 const AddWallet = ({ data }: any) => {
   const { t } = useTranslation("common");
   // const t = (s: string) => s;
-  const { settings } = data;
-  const metadata = {
-    page_title: t("Connect Wallet"),
-    title: t("Connect Wallet"),
-    description: t("Connect wallet"),
-    site_name:
-      (settings && settings[SETTINGS_SLUG_APPLICATION_TITLE]) ||
-      process.env.NEXT_PUBLIC_APP_NAME,
-  };
 
   return (
-    <BasicLayout data={settings}>
-      <MetaHeadSection metadata={metadata} />
+    <BasicLayout>
       <BreadCrumbSection
         page_title={t("Connect Wallet")}
         title={t("Connect Wallet")}

@@ -19,15 +19,7 @@ import { RootState } from "../store";
 
 export default function RouteGuard({ children }: any) {
   const authenticatedRoutes = [
-    "/collections/edit/[slug]",
-    "/assets/edit/[slug]",
-    "/assets/sell/[slug]",
-    "/assets/transfer/[slug]",
-    "/settings",
-    "/collections/create",
-    "/assets/create",
     "/profile/edit",
-    "/watchlist",
   ];
 
   const walletConnectedRoute = ["/profile", "/collections"];
