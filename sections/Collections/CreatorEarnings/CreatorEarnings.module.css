@@ -1,0 +1,61 @@
+.topSection h2 {
+  font-size: 3.6rem;
+  letter-spacing: 0.1rem;
+  color: var(--text-color-4);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.topSection p {
+  color: var(--text-color-7);
+  margin: 1rem 0;
+  font-size: 1.6rem;
+}
+
+.earningsHistory {
+  height: 500px;
+  border: 1px solid var(--border-4);
+}
+.item {
+}
+
+/* .table {
+  white-space: nowrap;
+} */
+
+.table caption {
+  caption-side: top;
+  color: var(--text-color-4);
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 2rem;
+  padding-left: 0.5rem;
+}
+
+.table th {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.table td {
+  font-size: 1.5rem;
+}
+
+.table th,
+.table td {
+  padding: 1.5rem 0.5rem;
+  min-width: 100px;
+  box-shadow: none;
+  transition: all 0.2s ease 0s;
+}
+
+.row:hover {
+  background-color: var(--orange-light);
+  box-shadow: 6px 6px 35px rgb(166 166 166 / 25%);
+}
+
+.itemNumber {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}

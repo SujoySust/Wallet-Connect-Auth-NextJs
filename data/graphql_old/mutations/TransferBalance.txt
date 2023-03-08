@@ -1,0 +1,5 @@
+mutation TransferBalance($address: String!, $amount: Float!) {
+    transferBalance(toAddress: $address, amount: $amount) {
+        transactionHash
+    }
+}

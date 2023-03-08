@@ -1,0 +1,33 @@
+.intro {
+  margin-bottom: 5rem;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+
+  display: none;
+}
+
+.subtitle {
+  margin-bottom: 3rem;
+  color: var(--text-color-7);
+  font-size: 1.7rem;
+}
+
+.linkList {
+  border-radius: 1rem;
+  border: 0;
+}
+
+.link {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color-6);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.link svg {
+  margin-right: 1rem;
+}

@@ -1,0 +1,11 @@
+query checkCollectionWatchedByUser(
+  $collection_id: Int!
+  $user_id: Int
+  $user_wallet_address: String
+) {
+  checkCollectionWatchedByUser(
+    collection_id: $collection_id
+    user_id: $user_id
+    user_wallet_address: $user_wallet_address
+  )
+}

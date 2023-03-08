@@ -1,0 +1,84 @@
+.widgetArea {
+  background: #161519;
+  padding: 7rem 0 1.5rem 0;
+}
+.singleWidget {
+  margin-bottom: 3rem;
+}
+.widgetTitle {
+  margin-bottom: 3rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--text-color-3);
+}
+
+.menuWidget ul {
+  margin: 0;
+  padding: 0;
+}
+.menuWidget ul li {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+.menuWidget ul li:last-child {
+  margin-bottom: 0;
+}
+.menuWidget ul li a {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--text-color-3);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.menuWidget ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footerBottom {
+  padding: 3.5rem 0;
+  background: #0a090b;
+}
+.copyrightText {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color-3);
+}
+.copyrightText a {
+  color: var(--text-color-3);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.copyrightText a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 1199px) {
+  .menuWidget ul li a {
+    font-size: 1.6rem;
+  }
+
+  .copyrightText {
+    font-size: 1.6rem;
+  }
+
+  .widgetTitle {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .widget-area {
+    padding: 5rem 0px 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .footerBottom {
+    padding: 2rem 0;
+  }
+}

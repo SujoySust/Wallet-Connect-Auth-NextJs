@@ -1,0 +1,115 @@
+.wrapper {
+  display: flex;
+}
+
+.sidebar {
+  width: 30rem;
+  padding: 0 2rem;
+}
+.SettingsCustomContainer {
+  max-width: 1600px;
+  /* min-width: 1200px; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin: 0 auto;
+}
+
+.contents {
+  flex: 1;
+  max-width: 120rem;
+  padding: 0 2rem;
+  padding-left: 5rem;
+}
+
+.label {
+  display: block;
+  margin: 1rem 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-color-7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.buttonList {
+  display: grid;
+  gap: 1rem;
+}
+
+.buttonListButton {
+  padding: 1.5rem 2rem;
+  border: 0;
+  border-radius: 1rem;
+  background: transparent;
+  color: var(--text-color-5) !important;
+  text-align: left;
+  color: var(--text-color-7);
+  font-weight: 400;
+  transition: all 0.4s;
+}
+
+.buttonListButton.selected {
+  background: var(--background-color-3);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.title {
+  margin-left: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .contents {
+    margin-top: 5rem;
+    padding-left: 2rem;
+  }
+
+  .buttonList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .buttonList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .buttonList {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 5rem);
+  }
+
+  .buttonListButton {
+    text-align: center;
+    border-radius: 50%;
+    height: 5rem;
+
+    line-height: 0.5;
+    padding: 0;
+  }
+
+  .title {
+    display: none;
+  }
+}

@@ -1,0 +1,66 @@
+query getUserBuyOfferLists(
+  $after: String
+  $before: String
+  $collection_id: Int
+  $first: Int
+  $last: Int
+  $offer_maker_id: Int
+  $offer_receiver_id: Int
+  $skip: Int
+) {
+  getUserBuyOfferLists(
+    after: $after
+    before: $before
+    collection_id: $collection_id
+    first: $first
+    last: $last
+    offer_maker_id: $offer_maker_id
+    offer_receiver_id: $offer_receiver_id
+    skip: $skip
+  ) {
+    totalCount
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    edges {
+      cursor
+      node {
+        created_at
+        end_date
+        fee_amount
+        total_amount
+        start_date
+        fee_percentage
+        id
+        user_id
+        user {
+          name
+          username
+          wallet_address
+        }
+        payment_token {
+          id
+          logo
+          name
+          token_symbol
+          usd_rate
+        }
+        item {
+          id
+          slug
+          name
+          owner_id
+          status
+          creator {
+            wallet_address
+            username
+          }
+        }
+        item_id
+      }
+    }
+  }
+}

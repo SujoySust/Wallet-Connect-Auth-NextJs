@@ -1,0 +1,7 @@
+mutation bid($itemId: Int!, $amount: Float!) {
+    placeBid(itemId: $itemId, amount: $amount) {
+        id
+        senderId
+        amount
+    }
+}

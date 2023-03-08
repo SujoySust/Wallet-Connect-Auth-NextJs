@@ -1,0 +1,90 @@
+.Loader {
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(115deg, var(--blue) 0%, var(--s1) 100%);
+}
+
+.LoaderImageContainer {
+  width: 150px;
+  height: 150px;
+  display: grid;
+  place-items: center;
+}
+
+.LoaderImageContainer img {
+  margin-bottom: 4rem;
+  animation: pulse 1.25s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+/* 
+      TinyLoader
+*/
+.TinyLoader {
+  font-size: 10px;
+  margin: 0 10px;
+  text-indent: -9999em;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #ffffff;
+  background: linear-gradient(
+    to right,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  position: relative;
+  animation: load3 1.4s infinite linear;
+  transform: translateZ(0);
+}
+.TinyLoader:before {
+  width: 50%;
+  height: 50%;
+  background: #ffffff;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.TinyLoader:after {
+  background: var(--primary-color);
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

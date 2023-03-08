@@ -1,0 +1,44 @@
+.modalTitle {
+  text-align: center;
+  font-size: 2.75rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-4);
+}
+
+.tokenListWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border-4);
+}
+
+.toggleWrapBtn {
+  width: 3.75rem;
+  height: 3.75rem;
+  display: grid;
+  place-items: center;
+  background: var(--orange-light);
+  border: 1px solid var(--orange-2);
+  border-radius: 50%;
+}
+
+.toggleWrapBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.loadingDisabled,
+.loadingDisabled:disabled {
+  cursor: not-allowed;
+  padding: 1rem 3rem;
+  opacity: 0.75;
+  border-radius: 1rem;
+  border: 1px solid var(--border-4);
+}

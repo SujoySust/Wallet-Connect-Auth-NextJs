@@ -1,0 +1,7 @@
+mutation userVerifyMail($verificationCode: String!) {
+  userVerifyMail(verificationCode: $verificationCode) {
+    code
+    message
+    success
+  }
+}

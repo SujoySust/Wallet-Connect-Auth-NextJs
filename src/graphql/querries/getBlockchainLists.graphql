@@ -1,0 +1,28 @@
+query getBlockchainLists {
+  getBlockchainLists {
+    chain_id
+    currency_symbol
+    exchange_contract
+    explorer_url
+    id
+    description
+    logo
+    payment_tokens {
+      blockchain_id
+      contract_address
+      id
+      is_default
+      logo
+      min_amount_to_execute_auction
+      name
+      status
+      token_symbol
+      total_decimal
+      type
+    }
+    network_name
+    nft_contract
+    provider
+    status
+  }
+}

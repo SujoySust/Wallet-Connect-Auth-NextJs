@@ -1,0 +1,48 @@
+query myAssets(
+  $collectionId: Int
+  $cursor: String
+  $categoryId: Int
+  $query: String
+  $orderBy: ItemOrder
+) {
+  ownedItems(
+    first: 6
+    after: $cursor
+    collectionId: $collectionId
+    categoryId: $categoryId
+    query: $query
+    orderBy: $orderBy
+  ) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    edges {
+      node {
+        id
+        name
+        image
+        price
+        auctionEndAt
+        tokenId
+        status
+        creatorId
+        category {
+          id
+          title
+        }
+        collection {
+          name
+          image
+          contractAddress
+        }
+        currentOwner {
+          id
+          name
+          username
+          walletAddress
+        }
+      }
+    }
+  }
+}

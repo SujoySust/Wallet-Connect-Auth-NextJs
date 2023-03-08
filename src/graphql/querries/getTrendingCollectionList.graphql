@@ -1,0 +1,20 @@
+query getTrendingCollectionList(
+  $limit: Int
+) {
+  getTrendingCollectionList(
+    limit: $limit
+  ) {
+    id
+    name
+    username
+    user_wallet_address
+    user_id
+    slug
+    logo
+    feature_image
+    banner_image
+    _count {
+      items
+    }
+  }
+}

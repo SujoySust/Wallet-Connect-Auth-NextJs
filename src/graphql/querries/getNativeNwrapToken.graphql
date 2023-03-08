@@ -1,0 +1,39 @@
+query getNativeNwrapToken($blockchain_id: Int, $chain_id: Int) {
+  getNativeNwrapToken(blockchain_id: $blockchain_id, chain_id: $chain_id) {
+    native_token {
+      id
+      name
+      contract_address
+      token_symbol
+      total_decimal
+      is_wrapable
+      is_default
+      min_amount_to_execute_auction
+      type
+      logo
+      usd_rate
+      blockchain {
+        id
+        network_name
+      }
+    }
+
+    wrap_token {
+      id
+      name
+      contract_address
+      token_symbol
+      total_decimal
+      is_wrapable
+      is_default
+      min_amount_to_execute_auction
+      type
+      logo
+      usd_rate
+      blockchain {
+        id
+        network_name
+      }
+    }
+  }
+}

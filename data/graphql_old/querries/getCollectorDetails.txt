@@ -1,0 +1,12 @@
+query getCollectorDetails($address: String!){
+    getCollectorDetails(address: $address){
+        id
+        name
+        username
+        avatar
+        email
+        phone
+        author_content
+        walletAddress
+    }
+}

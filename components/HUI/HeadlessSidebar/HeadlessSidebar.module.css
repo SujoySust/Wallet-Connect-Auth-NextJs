@@ -1,0 +1,66 @@
+.dialog {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  position: relative;
+  background: var(--background-color);
+  width: 400px;
+  height: 100%;
+  overflow: auto;
+  animation: slide 0.3s ease-in-out;
+}
+
+.title {
+  padding: 1rem 2rem;
+  color: var(--text-color);
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-4);
+}
+
+.closeBtn {
+  background: transparent;
+  border: 0;
+  color: var(--p3);
+  font-size: 2.25rem;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(105%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
+}

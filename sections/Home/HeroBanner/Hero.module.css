@@ -1,0 +1,176 @@
+.heroBanner {
+  min-height: 80vh;
+  padding: 15rem 0 5rem 0;
+  color: var(--text-color-3);
+  background: url("/assets/images/hero-banner-bg.jpg") no-repeat center
+    center/cover;
+
+  display: flex;
+  align-items: center;
+}
+
+.heroBannerInfo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.heroBanner .banner-title {
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  line-height: 6.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--text-color-3);
+}
+.heroBanner .banner-content {
+  margin-bottom: 5rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: var(--text-color-3);
+}
+
+.heroText {
+  margin-bottom: 1.8rem;
+}
+
+.heroText h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 65px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.heroText p {
+  font-size: 1.8rem;
+  line-height: 30px;
+}
+
+.bannerBtn {
+  display: inline-block;
+  padding: 0.9rem 3.5rem;
+  border: 2px solid #f74d06;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--text-color-3);
+  border-radius: 0.7rem;
+  margin-right: 2.5rem;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.4s linear;
+  text-align: center;
+  min-width: 16rem;
+}
+.bannerBtn:hover {
+  background: var(--primary-color);
+  color: var(--text-color-3);
+}
+.bannerBtn:last-child {
+  margin-right: 0;
+}
+
+.bannerBtnFilled {
+  background: var(--background-color-6);
+  border: 2px solid var(--border-6);
+  color: var(--primary-color);
+}
+.bannerBtnFilled:hover {
+  color: var(--text-color-3);
+  background: transparent;
+}
+
+.heroCard {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.heroCard img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem 1.5rem 0 0;
+  transition: all 0.4s;
+  transform: scale(1.0001);
+}
+.heroCard:hover {
+  transition: all 0.4s;
+  box-shadow: 0 0.5rem 1rem 1rem rgba(255, 255, 255, 0.15);
+}
+
+.heroCardInfo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.heroCardInfo img {
+  width: 50px;
+  margin-right: 2rem;
+}
+.heroCardInfo div {
+  display: flex;
+  flex-direction: column;
+}
+.heroCardInfo div span {
+  line-height: 1.5;
+}
+.heroCardInfo div span:last-child {
+  color: var(--primary-color);
+}
+
+@media (max-width: 991px) {
+  .heroBannerInfo {
+    align-items: center;
+    margin-bottom: 15rem;
+  }
+
+  .heroText h2 {
+    font-size: 5.5rem;
+  }
+
+  .heroCard {
+    max-width: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .heroText h2 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .heroBanner {
+    padding: 10rem 0 5rem 0;
+  }
+
+  .banner-title {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .bannerBtn {
+    padding: 0.9rem 2.5rem;
+    margin-right: 1.5rem;
+    min-width: auto;
+  }
+
+  .heroText h2 {
+    font-size: 4.25rem;
+  }
+}
+@media (max-width: 375px) {
+  .banner-title {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+
+  .heroText h2 {
+    font-size: 3.5rem;
+  }
+}

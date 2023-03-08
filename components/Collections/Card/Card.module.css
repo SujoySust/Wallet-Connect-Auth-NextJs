@@ -1,0 +1,129 @@
+.singleAuthor {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 0 1.5rem;
+  z-index: 1;
+  margin-bottom: 3rem;
+}
+
+.singleAuthor:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 85%;
+  left: 0;
+  bottom: 0;
+  background: var(--background-color);
+  box-shadow: 6px 6px 35px var(--box-shadow);
+  z-index: -1;
+  border-radius: 1.5rem;
+}
+.fixedWidth {
+  width: 25rem;
+}
+.authorThumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--background-color-4);
+  height: 25rem;
+  border-radius: 1.5rem;
+}
+
+.authorThumbnail a {
+  display: block;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.authorThumbnail img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.5s linear;
+  border-radius: 1rem;
+}
+
+.status {
+  position: absolute;
+  top: 5rem;
+  right: -1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.status svg {
+  font-size: 2.5rem;
+  color: var(--text-color-3);
+  line-height: 1;
+}
+
+.authorInfo {
+  padding: 1.5rem 0;
+}
+
+.authorName {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--text-color);
+  margin: auto;
+  margin-top: 1.5rem;
+
+  /* border: 1px solid;
+  max-width: 250px; */
+}
+.authorName a {
+  color: var(--text-color);
+  transition: all 0.5s linear;
+}
+.authorName a:hover {
+  color: var(--primary-color);
+}
+
+.singleAuthor:hover .authorThumbnail img {
+  transform: scale(1.1);
+}
+
+.description {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.itemCount {
+  display: block;
+}
+.roundImg {
+  height: 5rem !important;
+  width: 5rem !important;
+  min-width: 6rem !important;
+  max-width: 6rem !important;
+  border-radius: 100%;
+  border: 4px solid var(--background-color-4) !important;
+}
+.content {
+  display: flex;
+  height: 6rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%);
+}
+@media (max-width: 991px) {
+  .authorName {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .authorThumbnail img {
+    /* height: auto; */
+  }
+}

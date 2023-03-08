@@ -1,0 +1,17 @@
+.content {
+  text-align: center;
+}
+
+.content h3 {
+  color: var(--text-color-6);
+  margin: 2rem 0;
+}
+
+.content p {
+  color: var(--text-color-7);
+}
+
+.contentButton {
+  width: 15rem;
+  height: 5rem;
+}

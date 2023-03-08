@@ -1,0 +1,9 @@
+query getBlockchainListsForFilter {
+  getBlockchainLists {
+    id
+    chain_id
+    network_name
+    logo
+    status
+  }
+}

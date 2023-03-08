@@ -1,0 +1,8 @@
+query myCollectionLists {
+  myCollectionLists(orderBy: { field: id, direction: desc }) {
+    id
+    name
+    image
+    status
+  }
+}

@@ -1,0 +1,51 @@
+.switchWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.switchEnable {
+  background: var(--background-color-4) !important;
+}
+.switchDisable {
+  background: var(--primary-color) !important;
+}
+
+.switchButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 6rem;
+  height: 2.5rem;
+  padding: 0 !important;
+  border-radius: 2.5rem;
+  transform: 0 !important;
+  transition: all 0.5s;
+}
+
+.switchDisc {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.5s;
+}
+
+.switchDiscEnable {
+  transform: translateX(0.75rem);
+}
+
+.switchDiscDisable {
+  transform: translateX(3.75rem);
+}
+
+/* 
+            Subtitle
+*/
+
+.subtitleInfo svg {
+  margin-left: 0.5rem;
+  margin-top: -0.25rem;
+  color: var(--text-color);
+  cursor: pointer;
+}

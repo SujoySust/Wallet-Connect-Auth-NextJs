@@ -1,0 +1,53 @@
+query getActiveSellOfferLists(
+  $after: String
+  $before: String
+  $first: Int
+  $last: Int
+  $skip: Int
+) {
+  getActiveSellOfferLists(
+    after: $after
+    before: $before
+    first: $first
+    last: $last
+    skip: $skip
+  ) {
+    totalCount
+    pageInfo {
+      endCursor
+      startCursor
+      hasNextPage
+      hasPreviousPage
+    }
+    edges {
+      node {
+        id
+        total_amount
+        created_at
+        end_date
+        item {
+          name
+          media_path
+          thumbnail_path
+          slug
+          collection {
+            name
+            slug
+          }
+        }
+        user {
+          username
+          wallet_address
+        }
+        payment_token {
+          id
+          contract_address
+          name
+          logo
+          token_symbol
+          usd_rate
+        }
+      }
+    }
+  }
+}

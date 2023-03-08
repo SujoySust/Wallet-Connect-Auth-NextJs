@@ -1,0 +1,76 @@
+query singleItem($address: String!, $token: Int!) {
+    singleItem(contractAddress: $address, token: $token) {
+        id
+        name
+        image
+        price
+        auctionEndAt
+        tokenId
+        description
+        creator {
+            id
+            name
+            email
+            avatar
+            walletAddress
+        }
+        currentOwner {
+            id
+            name
+            email
+            avatar
+            walletAddress
+        }
+        collection {
+            id
+            name
+            image
+            contractAddress
+            contractSymbol
+        }
+        prices {
+            id
+            amount
+            createdAt
+        }
+        bids {
+            id
+            amount
+            status
+            createdAt
+            sender {
+                id
+                name
+                username
+                email
+                avatar
+                walletAddress
+            }
+        }
+        likes {
+            userId
+        }
+        histories {
+            id
+            hash
+            amount
+            type
+            isValid
+            createdAt
+            from {
+                id
+                email
+                name
+                avatar
+                walletAddress
+            }
+            to {
+                id
+                email
+                name
+                avatar
+                walletAddress
+            }
+        }
+    }
+}

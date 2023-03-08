@@ -1,0 +1,119 @@
+query myCollections(
+  $after: String
+  $before: String
+  $first: Int
+  $last: Int
+  $orderBy: CollectionOrder
+  $query: String
+  $skip: Int
+) {
+  myCollections(
+    after: $after
+    before: $before
+    first: $first
+    last: $last
+    orderBy: $orderBy
+    skip: $skip
+    query: $query
+  ) {
+    totalCount
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    edges {
+      cursor
+      node {
+        id
+        name
+        description
+        image
+        coverImage
+        createdAt
+        note
+        status
+        royalties
+        volumeTraded
+        updatedAt
+        contractAddress
+        contractSymbol
+        authorId
+        author {
+          id
+          name
+          username
+          email
+          isEmailVerified
+          phone
+          walletAddress
+          avatar
+        }
+        items {
+          auctionEndAt
+          bids {
+            id
+            itemId
+            status
+            amount
+            createdAt
+            senderId
+          }
+          category {
+            id
+            createdAt
+            updatedAt
+          }
+          categoryId
+          collectionId
+          createdAt
+          creatorId
+          currentOwnerId
+          description
+          externalUrl
+          histories {
+            id
+            itemId
+            isValid
+            fromId
+            toId
+            amount
+          }
+          id
+          image
+          ipfsHash
+          levels {
+            id
+            itemId
+            name
+            value
+            valueof
+          }
+          likeCount
+          likes {
+            id
+            itemId
+            userId
+          }
+          mediaPath
+          mintedAt
+          name
+          price
+          prices {
+            id
+            amount
+            itemId
+            createdAt
+            updatedAt
+          }
+          status
+          tokenId
+          unlockContentUrl
+          updatedAt
+          viewCount
+        }
+      }
+    }
+  }
+}

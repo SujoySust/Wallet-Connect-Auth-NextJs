@@ -1,0 +1,3 @@
+mutation PublishAsset($itemId: Int!) {
+    publishItem(itemId: $itemId)
+}

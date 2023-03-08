@@ -1,0 +1,38 @@
+query getCollectionListsPaginateForFilter(
+  $after: String
+  $before: String
+  $first: Int
+  $last: Int
+  $query: String
+  $user_id: Int
+) {
+  getCollectionListsPaginate(
+    after: $after
+    before: $before
+    first: $first
+    last: $last
+    query: $query
+    user_id: $user_id
+  ) {
+    totalCount
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    edges {
+      node {
+        id
+        name
+        slug
+        logo
+        feature_image
+        banner_image
+        _count {
+          items
+        }
+      }
+    }
+  }
+}

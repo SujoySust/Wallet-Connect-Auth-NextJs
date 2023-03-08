@@ -1,0 +1,7 @@
+query checkUniqueUser($wallet_address: String!, $email: String, $username: String) {
+  checkUniqueUser(wallet_address: $wallet_address, email: $email, username: $username) {
+    code
+    success
+    message
+  }
+}

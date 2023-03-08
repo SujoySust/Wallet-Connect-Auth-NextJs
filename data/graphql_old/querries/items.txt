@@ -1,0 +1,60 @@
+query items(
+  $paginateNumber: Int
+  $collectionId: Int
+  $cursor: String
+  $categoryId: Int
+  $currentOwnerId: Int
+  $query: String
+  $orderBy: ItemOrder
+) {
+  listItems(
+    first: $paginateNumber
+    after: $cursor
+    collectionId: $collectionId
+    categoryId: $categoryId
+    currentOwnerId: $currentOwnerId
+    query: $query
+    orderBy: $orderBy
+  ) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    edges {
+      node {
+        id
+        name
+        image
+        price
+        auctionEndAt
+        tokenId
+        currentOwner {
+          id
+          name
+          email
+          avatar
+          walletAddress
+        }
+        collection {
+          id
+          name
+          contractAddress
+          contractSymbol
+        }
+        prices {
+          id
+          amount
+          createdAt
+        }
+        bids {
+          id
+          amount
+          status
+        }
+        likes {
+          userId
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+mutation updateProfile(
+  $banner_img_file: Upload
+  $bio: String
+  $email: String
+  $instagram_link: String
+  $name: String
+  $phone: String
+  $profile_img_file: Upload
+  $username: String!
+  $website_link: String
+) {
+  updateProfile(
+    data: {
+      banner_img_file: $banner_img_file
+      bio: $bio
+      email: $email
+      instagram_link: $instagram_link
+      name: $name
+      phone: $phone
+      profile_img_file: $profile_img_file
+      username: $username
+      website_link: $website_link
+    }
+  ) {
+    code
+    message
+    success
+  }
+}

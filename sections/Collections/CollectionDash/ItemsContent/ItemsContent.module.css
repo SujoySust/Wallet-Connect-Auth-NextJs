@@ -1,0 +1,13 @@
+.collectionWrapper {
+  margin-top: 5rem;
+  display: flex;
+  gap: 2.5rem;
+  flex-flow: row wrap;
+}
+
+@media (max-width: 768px) {
+  .collectionWrapper {
+    gap: 3rem;
+    justify-content: space-around;
+  }
+}

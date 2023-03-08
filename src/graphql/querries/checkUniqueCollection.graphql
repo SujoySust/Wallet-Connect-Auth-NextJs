@@ -1,0 +1,6 @@
+query checkUniqueCollection($id:Int,$name:String,$slug:String){
+    checkUniqueCollection(id: $id,name: $name, slug: $slug){
+        success
+        message
+    }
+}

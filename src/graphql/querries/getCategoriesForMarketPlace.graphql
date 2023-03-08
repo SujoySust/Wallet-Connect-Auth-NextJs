@@ -1,0 +1,6 @@
+query getCategoriesForMarketPlace {
+  getCategories {
+    id
+    title
+  }
+}

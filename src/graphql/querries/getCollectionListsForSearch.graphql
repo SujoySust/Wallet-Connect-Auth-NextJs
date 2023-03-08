@@ -1,0 +1,59 @@
+query getCollectionListsForSearch(
+  $first: Int
+  $query: String
+  $totalItem: Int
+  $withItem: Boolean
+) {
+  getCollectionListsPaginate(
+    first: $first
+    query: $query
+    totalItem: $totalItem
+    withItem: $withItem
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        name
+        slug
+        logo
+        royalties
+        blockchain {
+          id
+          logo
+          network_name
+        }
+        user {
+          id
+          username
+        }
+        items {
+          id
+          name
+          thumbnail_path
+        }
+        _count{
+          items
+        }
+        metadata{
+          floor_price{
+            usd_price
+            native_price
+          }
+          volume{
+            usd_price
+            native_price
+          }
+          native_token{
+            id
+            usd_rate
+            logo
+            name
+            token_symbol
+          }
+          owner_count
+        }
+      }
+    }
+  }
+}

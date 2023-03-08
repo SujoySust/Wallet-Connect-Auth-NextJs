@@ -1,0 +1,50 @@
+.tabGroup {
+  margin-top: 5rem;
+}
+
+.tabBtnGroupWrapper {
+  border-bottom: 1px solid var(--border-4);
+}
+
+.tabBtnGroup {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.tabBtn {
+  margin: 0 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  color: var(--text-color-7);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: 0;
+  transition: all 0.4s;
+}
+.tabBtn:hover {
+  color: var(--text-color-6);
+}
+
+.tabBtnSelected {
+  color: var(--text-color-6);
+  position: relative;
+}
+.tabBtnSelected::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.tabBtn svg {
+  margin-right: 1rem;
+  font-size: 2rem;
+}

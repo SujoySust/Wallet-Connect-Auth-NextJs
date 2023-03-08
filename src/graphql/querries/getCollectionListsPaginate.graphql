@@ -1,0 +1,49 @@
+query getCollectionListsPaginate(
+  $after: String
+  $before: String
+  $first: Int
+  $last: Int
+  $orderBy: CollectionOrder
+  $query: String
+  $skip: Int
+  $user_id: Int
+  $category_id: Int
+) {
+  getCollectionListsPaginate(
+    after: $after
+    before: $before
+    first: $first
+    last: $last
+    orderBy: $orderBy
+    query: $query
+    skip: $skip
+    user_id: $user_id
+    category_id: $category_id
+  ) {
+    totalCount
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    edges {
+      node {
+        id
+        name
+        slug
+        logo
+        feature_image
+        banner_image
+        _count {
+          items
+        }
+        user {
+          id
+          username
+          wallet_address
+        }
+      }
+    }
+  }
+}

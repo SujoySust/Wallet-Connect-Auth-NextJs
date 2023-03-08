@@ -1,0 +1,126 @@
+.inputImageCard {
+  position: relative;
+  padding: 0 1.5rem;
+  margin-bottom: 4rem;
+  z-index: 1;
+}
+
+.inputImageCardWrap {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.inputImageCard:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 85%;
+  left: 0;
+  bottom: 0;
+  background: var(--background-color);
+  box-shadow: 6px 6px 35px var(--box-shadow);
+  z-index: -1;
+  border-radius: 1.5rem;
+}
+
+.inputImage {
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  background: var(--background-color-4);
+  overflow: hidden;
+}
+
+.inputImage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inputFileContainer {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.75);
+  display: grid;
+  place-items: center;
+  transition: all 0.4s ease;
+}
+
+.fullWidth {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+.shortWidth {
+  width: 3rem;
+  height: 3rem;
+  background: var(--background-color-6a);
+  border: 2px solid var(--primary-color);
+}
+
+.inputFileContainer:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.clearPreview {
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
+  border: 0;
+  width: 3rem;
+  height: 3rem;
+  z-index: 1;
+  border-radius: inherit;
+  background: var(--p3);
+  color: var(--text-color-3);
+}
+
+.inputFileContainer svg {
+  font-size: 2rem;
+}
+
+.inputFileContainer input {
+  display: none;
+}
+
+.inputImageCardTitle {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.inputImageCardSubTitle {
+  margin-bottom: 0;
+  font-size: 1.35rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: var(--text-color-7);
+}
+
+@media (max-width: 1199px) {
+  .imageSize {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .inputImageCard {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .inputImage {
+    width: 100%;
+  }
+}

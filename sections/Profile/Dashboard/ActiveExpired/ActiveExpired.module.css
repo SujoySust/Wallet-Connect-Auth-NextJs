@@ -1,0 +1,122 @@
+.tokenLogo {
+  margin-right: 0.75rem;
+  width: 1.25rem;
+}
+
+.cancelButton {
+  padding: 0.5rem 1.5rem;
+  color: var(--primary-color);
+  background: var(--background-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 1.5rem;
+  transition: all 0.4s;
+}
+
+.cancelButton:disabled {
+  cursor: not-allowed;
+  background: var(--background-color-4);
+}
+
+.tableBody td {
+  padding: 0.75rem 0;
+}
+.container {
+  padding: 0.5rem;
+  margin: 5rem;
+}
+.row {
+  font-size: 1.6rem;
+  background: transparent;
+  box-shadow: none;
+  transition: all 0.4s;
+}
+
+.row:hover {
+  /* background: var(--orange-light); */
+  box-shadow: 6px 6px 35px rgb(166 166 166 / 25%);
+}
+
+.row td {
+  padding: 1.8rem 0;
+}
+.chart {
+  width: 100%;
+  height: 350px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+.itemImage {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  margin-left: 1.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-4);
+  border-radius: 1.5rem;
+}
+
+.collectionName {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text-color-7) !important;
+}
+
+.itemName {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text-color-6) !important;
+}
+
+.username {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--p1) !important;
+  transition: all 0.4s;
+}
+
+.username:hover {
+  color: var(--primary-color) !important;
+}
+
+.time {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.time svg {
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.event {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.prices h4 {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+.prices p {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--text-color-7);
+}

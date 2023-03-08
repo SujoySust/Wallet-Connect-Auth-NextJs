@@ -1,0 +1,9 @@
+query getTokenLists{
+    getTokenLists{
+        id
+        name
+        logo
+        token_symbol
+        status
+    }
+}

@@ -1,0 +1,40 @@
+query getTopCollectionLists(
+    $paginateNumber: Int
+    $cursor: String
+    $days: Int
+    $orderBy: CollectionOrder
+) {
+    getTopCollectionLists(
+        first: $paginateNumber
+        after: $cursor
+        days: $days
+        orderBy: $orderBy
+    ) {
+        pageInfo {
+            hasNextPage
+            endCursor
+        }
+        edges {
+            node {
+                id
+                name
+                image
+                coverImage
+                description
+                royalties
+                contractAddress
+                status
+                createdAt
+                author {
+                    id
+                    name
+                    email
+                    username
+                    avatar
+                    walletAddress
+                }
+            }
+        }
+        totalCount
+    }
+}

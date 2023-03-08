@@ -1,0 +1,3 @@
+mutation EnableAuction($itemId: Int!, $date: Date!) {
+    enableAuction(itemId: $itemId, date: $date)
+}

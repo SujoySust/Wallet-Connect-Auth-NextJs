@@ -1,0 +1,6 @@
+mutation generateLoginMessage($wallet_address: String!) {
+  generateLoginMessage(wallet_address: $wallet_address) {
+    login_message
+    nonce
+  }
+}

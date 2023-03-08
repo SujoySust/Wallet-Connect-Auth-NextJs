@@ -1,0 +1,7 @@
+query ListFile {
+    listFile{
+        name
+        type
+        url
+    }
+}

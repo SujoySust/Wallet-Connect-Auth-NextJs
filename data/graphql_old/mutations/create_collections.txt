@@ -1,0 +1,32 @@
+mutation CreateCollection(
+  $name: String!
+  $description: String
+  $image: String
+  $coverImage: String
+  $royalties: Float!
+) {
+  createCollection(
+    data: {
+      name: $name
+      description: $description
+      image: $image
+      coverImage: $coverImage
+      royalties: $royalties
+    }
+  ) {
+    id
+    authorId
+    name
+    status
+    description
+    note
+    image
+    coverImage
+    royalties
+    volumeTraded
+    author {
+      name
+      walletAddress
+    }
+  }
+}

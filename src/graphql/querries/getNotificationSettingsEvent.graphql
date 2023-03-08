@@ -1,0 +1,8 @@
+query getNotificationSettingsEvent {
+  getNotificationSettingsEvent {
+    description
+    id
+    status
+    title
+  }
+}

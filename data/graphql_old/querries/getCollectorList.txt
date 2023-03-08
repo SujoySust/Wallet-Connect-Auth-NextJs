@@ -1,0 +1,25 @@
+query getCollectorList($paginateNumber: Int,$cursor:String){
+    getCollectorList(first: $paginateNumber, after: $cursor){
+        pageInfo
+        {
+            hasNextPage
+            endCursor
+        }
+        edges{
+            node{
+                id
+                name
+                phone
+                avatar
+                username
+                email
+                author_content
+                walletAddress
+                ownedItems{
+                    id
+                }
+            }
+        }
+        totalCount
+    }
+}

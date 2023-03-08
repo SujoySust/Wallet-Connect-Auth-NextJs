@@ -1,0 +1,112 @@
+query ItemDetailsBySlugOrTokenId(
+  $slugOrTokenId: String!
+  $viewer_wallet_address: String
+) {
+  ItemDetailsBySlugOrTokenId(
+    slugOrTokenId: $slugOrTokenId
+    viewer_wallet_address: $viewer_wallet_address
+  ) {
+    description
+    external_url
+    id
+    is_minted
+    is_unlockable_content
+    like_count
+    filetype
+    media_path
+    thumbnail_path
+    name
+    exchange_in_progress {
+      id
+    }
+    collection {
+      id
+      name
+      slug
+      logo
+      description
+      royalties
+      payout_address
+      contract_address
+      blockchain {
+        status
+        id
+        chain_id
+        explorer_url
+        logo
+        network_name
+        exchange_contract
+        nft_contract
+      }
+    }
+    owner {
+      id
+      username
+      wallet_address
+    }
+    creator {
+      id
+      username
+      wallet_address
+    }
+    active_buy {
+      id
+      uid
+      type
+      total_amount
+      start_date
+      end_date
+      created_at
+      payment_token {
+        id
+        name
+        contract_address
+        token_symbol
+        total_decimal
+        logo
+      }
+      user {
+        wallet_address
+      }
+    }
+    active_sell {
+      id
+      uid
+      nonce
+      signature
+      type
+      total_amount
+      seller_amount
+      fee_amount
+      royalty_address
+      royalty_amount
+      reserved_price
+      start_date
+      end_date
+      created_at
+      payment_token {
+        id
+        type
+        name
+        contract_address
+        token_symbol
+        total_decimal
+        logo
+        usd_rate
+      }
+      user {
+        wallet_address
+      }
+    }
+    highest_bid {
+      fee_amount
+      total_amount
+    }
+    price
+    slug
+    status
+    token_id
+    token_uri
+    view_count
+  }
+}

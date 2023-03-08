@@ -1,0 +1,20 @@
+query app {
+    getSettings {
+        cur
+        sections {
+            category {
+                title
+                description
+            }
+            banner {
+                title
+                description
+            }
+        }
+        contacts {
+            email
+            phone
+            address
+        }
+    }
+}

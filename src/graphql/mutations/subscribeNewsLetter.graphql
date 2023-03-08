@@ -1,0 +1,10 @@
+mutation saveNewsLetterSubscription(
+  $email: String!
+) {
+  saveNewsLetterSubscription(
+    email: $email
+  ) {
+    success
+    message
+  }
+}

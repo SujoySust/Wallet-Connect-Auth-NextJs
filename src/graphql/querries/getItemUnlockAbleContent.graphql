@@ -1,0 +1,3 @@
+query getItemUnlockAbleContent($item_slug: String!) {
+  getItemUnlockAbleContent(item_slug: $item_slug)
+}

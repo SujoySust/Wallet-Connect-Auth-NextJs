@@ -1,0 +1,7 @@
+mutation collectionWatchListToggle($collectionId: Int!) {
+  collectionWatchListToggle(collectionId: $collectionId) {
+    code
+    message
+    success
+  }
+}

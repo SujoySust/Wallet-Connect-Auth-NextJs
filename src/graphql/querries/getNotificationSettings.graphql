@@ -1,0 +1,7 @@
+query getNotificationSettings {
+  getNotificationSettings {
+    events
+    id
+    user_id
+  }
+}

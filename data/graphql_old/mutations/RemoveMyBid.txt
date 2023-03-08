@@ -1,0 +1,3 @@
+mutation removeBid($itemId: Int!) {
+    removeMyBid(itemId: $itemId)
+}

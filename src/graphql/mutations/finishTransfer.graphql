@@ -1,0 +1,10 @@
+mutation finishTransfer($transaction_hash: String!, $transfer_id: Int!) {
+  finishTransfer(
+    transaction_hash: $transaction_hash
+    transfer_id: $transfer_id
+  ) {
+    code
+    success
+    message
+  }
+}

@@ -1,0 +1,17 @@
+.content {
+  text-align: center;
+}
+
+.content h3 {
+  margin: 2rem 0;
+  color: var(--text-color-6);
+}
+
+.content p {
+  color: var(--text-color-7);
+}
+
+.icon {
+  color: var(--p4);
+  font-size: 4rem;
+}

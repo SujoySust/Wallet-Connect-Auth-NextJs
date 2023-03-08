@@ -1,0 +1,6 @@
+mutation UpdateProfile($name: String!, $email: String!, $username: String!, $avatar: String!, $phone: String!){
+    updateProfile(data: {email : $email, name : $name, username: $username, phone: $phone, avatar: $avatar}){
+        success
+        message
+    }
+}

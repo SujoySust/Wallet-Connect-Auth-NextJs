@@ -1,0 +1,16 @@
+query getAccountByAddress($wallet_address: String!) {
+  getAccountByAddress(wallet_address: $wallet_address) {
+    banner_img
+    bio
+    created_at
+    email
+    id
+    name
+    phone
+    profile_img
+    status
+    updated_at
+    username
+    wallet_address
+  }
+}

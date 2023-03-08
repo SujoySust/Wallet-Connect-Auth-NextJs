@@ -1,0 +1,8 @@
+mutation createTransfer($item_id: Int!, $to_address: String!) {
+  createTransfer(item_id: $item_id, to_address: $to_address) {
+    id
+    uid
+    status
+    transaction_hash
+  }
+}

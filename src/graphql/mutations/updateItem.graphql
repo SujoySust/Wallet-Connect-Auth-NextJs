@@ -1,0 +1,22 @@
+mutation updateItem(
+  $id: Int!
+  $description: String
+  $external_url: String
+  $is_unlockable_content: Int!
+  $unlockable_content: String
+) {
+  updateItem(
+    id: $id
+    data: {
+      description: $description
+      external_url: $external_url
+      is_unlockable_content: $is_unlockable_content
+      unlockable_content: $unlockable_content
+    }
+  ) {
+    id
+    name
+    slug
+    token_id
+  }
+}

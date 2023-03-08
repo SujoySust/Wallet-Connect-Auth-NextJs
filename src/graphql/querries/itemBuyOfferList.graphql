@@ -1,0 +1,28 @@
+query itemBuyOfferList($item_id: Int!) {
+  itemBuyOfferList(item_id: $item_id) {
+    id
+    uid
+    status
+    type
+    seller_amount
+    total_amount
+    created_at
+    start_date
+    end_date
+    user {
+      id
+      wallet_address
+      username
+    }
+    payment_token {
+      id
+      type
+      name
+      contract_address
+      token_symbol
+      total_decimal
+      logo
+      usd_rate
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.container {
+  padding: 3rem;
+  overflow: hidden;
+  margin-right: 0;
+}
+.collectionWrapper {
+  display: flex;
+  gap: 2.5rem;
+  flex-flow: row wrap;
+}
+
+.items {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 3rem;
+}
+
+@media (max-width: 768px) {
+  .items {
+    justify-content: space-evenly;
+    margin: 3rem 1rem;
+  }
+}

@@ -1,0 +1,94 @@
+query getCollectionDetails($slug: String!, $user_wallet_address: String) {
+  getCollectionDetails(slug: $slug, user_wallet_address: $user_wallet_address) {
+    itemCount
+    owner_count
+    is_watched
+    native_token{
+      id
+      usd_rate
+      logo
+      name
+      token_symbol
+    }
+    volume{
+        native_price
+        usd_price
+    }
+    floor_price{
+      native_price
+      usd_price
+    }
+    collection {
+      id
+      name
+      slug
+      description
+      logo
+      feature_image
+      banner_image
+      royalties
+      payout_address
+      contract_address
+      description
+      category_id
+      blockchain_id
+      display_theme
+      is_sensitive
+      status
+      blockchain_id
+      blockchain {
+        id
+        status
+        chain_id
+        description
+        currency_symbol
+        explorer_url
+        logo
+        payment_tokens {
+          blockchain_id
+          contract_address
+          id
+          is_default
+          is_wrapable
+          logo
+          min_amount_to_execute_auction
+          name
+          status
+          token_symbol
+          total_decimal
+          type
+        }
+        network_name
+        nft_contract
+      }
+      user {
+        id
+        name
+        username
+        wallet_address
+      }
+    }
+    social_links {
+      instagram_link
+      website_link
+      discord_link
+      medium_link
+    }
+    token_mappings {
+      payment_token {
+        blockchain_id
+        contract_address
+        id
+        is_default
+        is_wrapable
+        logo
+        min_amount_to_execute_auction
+        name
+        status
+        token_symbol
+        total_decimal
+        type
+      }
+    }
+  }
+}

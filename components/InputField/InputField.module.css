@@ -1,0 +1,151 @@
+.formGroup {
+  border-radius: 1.5rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.formGroupWrapper {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-flow: wrap; */
+}
+
+.formGroupTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  width: 100%;
+  margin: 0;
+}
+.formGroupSubTitle {
+  margin: 0.5rem 0;
+  font-size: 1.35rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: var(--text-color-6);
+}
+
+.formGroup button {
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+  transform: translateY(-10%);
+}
+
+.formGroup select {
+  cursor: pointer;
+  width: 100%;
+  padding: 0 1.5rem;
+  border: 1px solid var(--border-3);
+  border-radius: 1.5rem;
+  height: 4rem;
+  background: transparent;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+  font-size: 1.6rem;
+  background: var(--background-color);
+  border: 1px solid var(--border-3);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.inputGroup:focus-within {
+  color: inherit;
+  background: var(--background-color);
+  box-shadow: 6px 6px 35px var(--box-shadow);
+}
+
+.inputGroup.disabled {
+  background: var(--background-color-4);
+}
+
+.listElement {
+  margin: 0;
+  border-bottom: 0;
+  border-radius: 0;
+}
+.listElement:nth-child(2) {
+  margin-top: 1rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.listElement:last-of-type {
+  border-radius: 0 0 1.5rem 1.5rem;
+  border-bottom: 1px solid var(--border-3);
+}
+
+.inputGroupPrefix,
+.inputGroupPostfix {
+  font-size: 1.6rem;
+  color: var(--text-color-2);
+  transition: all 0.4s;
+}
+
+.inputGroupPrefix svg,
+.inputGroupPostfix svg {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.inputGroupPostfix {
+  cursor: pointer;
+  padding-left: 1rem;
+}
+.inputGroupPostfix:hover {
+  color: var(--text-color);
+}
+
+.inputGroupInput {
+  flex: 8;
+  height: 4rem;
+  font-family: inherit;
+  background: var(--background-color);
+  border: 0;
+}
+.inputGroupInput::placeholder {
+  color: var(--text-color-7);
+  font-family: inherit;
+  background: transparent;
+}
+
+.inputGroupInput:disabled {
+  background: var(--background-color-4);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 15rem;
+  margin-top: 0.75rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  background: var(--background-color);
+  border: 1px solid var(--border-3);
+  border-radius: 1.5rem;
+}
+.textarea:focus-visible {
+  background: var(--background-color);
+}
+
+.error {
+  font-size: 1.3rem;
+  line-height: normal;
+}
+
+@media (max-width: 480px) {
+  .inputGroupInput {
+    width: 12rem;
+  }
+
+  .inputGroupPrefix {
+    font-size: 1.4rem;
+  }
+  .inputGroupPrefix svg {
+    font-size: 1.5rem;
+    margin-right: 0.25rem;
+  }
+}

@@ -1,0 +1,8 @@
+.tableSection {
+  width: 100% !important;
+}
+@media (max-width: 568px) {
+  .tableSection {
+    width: 172% !important;
+  }
+}

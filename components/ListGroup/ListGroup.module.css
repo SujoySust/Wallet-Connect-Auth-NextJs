@@ -1,0 +1,43 @@
+.listGroup {
+  border-radius: 1.5rem;
+  /* overflow: hidden; */
+}
+
+.listGroup > a:nth-child(1),
+.listGroup > span:nth-child(1),
+.listGroup > button:nth-child(1) {
+  border-bottom-left-radius: 1.5rem !important;
+}
+
+.listGroup > a:last-child,
+.listGroup > span:last-child,
+.listGroup > button:last-child {
+  border-top-right-radius: 1.5rem !important;
+  border-bottom-right-radius: 1.5rem !important;
+}
+
+.listGroup > a,
+.listGroup > span,
+.listGroup > button {
+  min-width: 4.5rem;
+  min-height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color-7);
+  background: transparent;
+  border: 1px solid var(--border-3);
+  box-shadow: none;
+  transition: all 0.4s;
+}
+
+.listGroup > button {
+  border: 1px solid var(--border-3);
+}
+
+.listGroup > a:hover,
+.listGroup > button:hover {
+  color: var(--text-color-6);
+  background: var(--background-color);
+  box-shadow: 6px 6px 35px rgb(166 166 166 / 25%);
+}

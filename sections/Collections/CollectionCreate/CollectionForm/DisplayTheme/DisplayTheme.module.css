@@ -1,0 +1,72 @@
+.button {
+  width: 25rem;
+  height: 20rem;
+  padding: 0;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.6rem;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.buttonSelected {
+  border: 2px solid var(--primary-color) !important;
+}
+.buttonSelectedNot {
+  border: 1px solid var(--border-2) !important;
+}
+
+.selectedIcon {
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  z-index: 3;
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  background: var(--background-color);
+  color: var(--text-color-3);
+  border-radius: 50%;
+  box-shadow: 6px 6px 35px rgb(166 166 166 / 75%);
+}
+
+.selectedIcon svg {
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.25rem;
+}
+
+.buttonContent {
+  position: absolute;
+  inset: 0;
+  padding: 1.25rem;
+  border-radius: inherit;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttonContentImage {
+  margin-bottom: 1rem;
+}
+
+.buttonContent h3 {
+  color: var(--text-color);
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.buttonContent p {
+  margin-bottom: 0;
+  color: var(--text-color-7);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+}

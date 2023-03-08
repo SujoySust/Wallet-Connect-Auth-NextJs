@@ -1,0 +1,118 @@
+.dashboard {
+  min-height: 50rem;
+  position: relative;
+  display: flex;
+  border-top: 1px solid var(--border-4);
+}
+
+.sidebar {
+  width: 7rem;
+  border-right: 1px solid var(--border-4);
+}
+
+.drawerBtn {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  width: 4rem;
+  padding-right: 3rem;
+  font-size: 3rem;
+  color: var(--text-color-7);
+  background: var(--background-color);
+  border: 1px solid var(--border-3);
+  border-radius: 0 2rem 2rem 0;
+  box-shadow: 0 0 4rem rgb(166 166 166 / 50%);
+  transition: all 0.3s;
+}
+
+.btndrop {
+  border: none;
+  background-color: transparent;
+  color: var(--text-color-7);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.dropBtnitem.active {
+  color: var(--primary-color) !important;
+}
+
+.dropBtnitem {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 1rem;
+
+  border-bottom: 1px solid var(--border-4);
+}
+.drawerBtn:hover {
+  width: 5rem;
+  left: -1px;
+  color: var(--primary-color);
+  box-shadow: 0 0 4rem rgb(166 166 166 / 75%);
+}
+
+.sidebarExtended {
+  width: 300px;
+  padding-bottom: 3rem;
+}
+.selectSection {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-4);
+}
+.select {
+  width: 30rem;
+}
+.sidebarHeader {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--border-4);
+}
+
+.sidebarHeader span {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.sidebarIcon {
+  color: var(--text-color-7);
+  font-size: 2.75rem;
+}
+
+.content {
+  /* padding: 3rem; */
+  flex: 1 0 0%;
+}
+
+@media (max-width: 768px) {
+  .collectionWrapper {
+    gap: 3rem;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .drawerBtn {
+    display: block;
+  }
+}
+
+.contents {
+  flex: 1;
+  padding: 3rem;
+}

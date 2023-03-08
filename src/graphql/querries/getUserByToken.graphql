@@ -1,0 +1,5 @@
+query getUserByToken{
+    getUserByToken{
+        wallet_address
+    }
+}

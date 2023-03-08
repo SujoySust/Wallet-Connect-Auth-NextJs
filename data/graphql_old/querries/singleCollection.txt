@@ -1,0 +1,20 @@
+query singleCollection($address: String!) {
+    getCollection(address: $address) {
+        collection {
+            id
+            name
+            description
+            image
+            coverImage
+            contractAddress
+            volumeTraded
+            createdAt
+            author {
+                id
+                username
+                walletAddress
+            }
+        }
+        itemCount
+    }
+}

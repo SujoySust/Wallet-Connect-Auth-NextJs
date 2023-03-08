@@ -1,0 +1,3 @@
+mutation DeployCollection($collectionId: Int!){
+    deployCollection(collectionId: $collectionId)
+}

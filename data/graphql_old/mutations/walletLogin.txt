@@ -1,0 +1,9 @@
+mutation walletLogin($address: String!, $nonce: String!, $signature: String!) {
+  walletLogin(
+    data: { address: $address, nonce: $nonce, signature: $signature }
+  ) {
+    accessToken
+    expireAt
+    refreshToken
+  }
+}

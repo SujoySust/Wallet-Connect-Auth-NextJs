@@ -1,0 +1,7 @@
+mutation Signup($name: String!, $email: String!, $username: String!, $password: String!){
+    signup(data: {email : $email, name : $name, username: $username, password: $password}){
+        accessToken
+        refreshToken
+        expireAt
+    }
+}

@@ -1,0 +1,7 @@
+mutation syncItemOwner($item_id: Int!) {
+  syncItemOwner(item_id: $item_id) {
+    success
+    message
+    code
+  }
+}

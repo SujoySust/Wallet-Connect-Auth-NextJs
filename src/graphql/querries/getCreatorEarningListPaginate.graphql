@@ -1,0 +1,45 @@
+query getCreatorEarningListPaginate(
+  $after: String
+  $before: String
+  $collection_id: Int
+  $first: Int
+  $last: Int
+  $skip: Int
+  $user_id: Int
+) {
+  getCreatorEarningListPaginate(
+    after: $after
+    before: $before
+    collection_id: $collection_id
+    first: $first
+    last: $last
+    skip: $skip
+    user_id: $user_id
+  ) {
+    totalCount
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    edges {
+      cursor
+      node {
+        item {
+          collection_id
+          name
+          slug
+          thumbnail_path
+        }
+        payment_token {
+          token_symbol
+          logo
+        }
+        royalty_amount
+        royalty_address
+        created_at
+      }
+    }
+  }
+}

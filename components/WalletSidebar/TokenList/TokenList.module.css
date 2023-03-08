@@ -1,0 +1,97 @@
+.tokenListItem {
+  padding: 1.5rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color-4);
+}
+
+.tokenListItem > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nameInfo h3,
+.balanceInfo h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 0.1rem;
+}
+
+.nameInfo p,
+.balanceInfo p {
+  font-size: 1.3rem;
+  margin: 0;
+  color: var(--text-color-7);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.balanceInfo {
+  text-align: right;
+}
+
+.dropdownBtn {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdownBtn > * {
+  margin: 0;
+}
+
+.dropdownBtn img {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border-4);
+  border-radius: 25rem;
+}
+
+.dropdownBtn h3 {
+  color: var(--text-color-6);
+  font-size: 1.7rem;
+}
+
+.dropdownBtn span {
+  color: var(--text-color-7);
+}
+
+.dropdownMenu {
+  border-radius: 1rem;
+}
+
+.dropdownMenuItem {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 500;
+  transition: all 0.4s;
+
+  background: var(--background-color-4);
+}
+.dropdownMenuItem:hover {
+  color: var(--text-color-black);
+  background: var(--orange-2);
+}
+
+.dropdownMenuItem img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.dropdownMenuItem div {
+  margin-left: 0.75rem;
+}
+
+.dropdownMenuItem div svg {
+  font-size: 2rem;
+  margin-right: 1.75rem;
+}

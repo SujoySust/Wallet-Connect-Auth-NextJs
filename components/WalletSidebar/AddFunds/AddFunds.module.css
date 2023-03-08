@@ -1,0 +1,83 @@
+.modalWrapper {
+  z-index: 2000;
+  padding: 1rem;
+  text-align: center;
+  flex-flow: wrap;
+}
+
+.titleWrapper {
+  color: var(--text-color-4);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-4);
+}
+
+.titleWrapper h3 {
+  font-size: 2rem;
+}
+
+.imgWrapper {
+  text-align: center;
+  padding: 2rem;
+}
+
+.copyAddressWrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--text-color-5);
+  margin-bottom: 2rem;
+}
+
+.copyAddressWrapper p {
+  flex: 1;
+  background: var(--background-color-2);
+  color: var(--text-color-7);
+  border: 1px solid var(--border-2);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+.copyAddressWrapper button {
+  border: none;
+  background: var(--primary-color);
+  color: var(--text-color-3);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.infoWrapper {
+  color: var(--text-color-6);
+}
+
+.bottomInfoWrapper {
+  color: var(--text-color-7);
+}
+
+.bottomInfoWrapper p {
+  font-size: 1.5rem;
+}
+
+.tooltipIcon {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .infoWrapper,
+  .bottomInfoWrapper {
+    font-size: 1.6rem;
+  }
+
+  .copyAddressWrapper {
+    flex-direction: column;
+  }
+
+  .copyAddressWrapper p,
+  .copyAddressWrapper button {
+    width: 100%;
+  }
+}

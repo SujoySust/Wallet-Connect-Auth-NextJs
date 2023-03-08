@@ -1,0 +1,5 @@
+mutation itemFavouriteListToggle($item_id: Int!) {
+  itemFavouriteListToggle(item_id: $item_id) {
+    count
+  }
+}

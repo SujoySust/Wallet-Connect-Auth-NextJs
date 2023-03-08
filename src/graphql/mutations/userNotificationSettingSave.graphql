@@ -1,0 +1,7 @@
+mutation userNotificationSettingSave($events: [Int!]) {
+  userNotificationSettingSave(data: { events: $events }) {
+    code
+    message
+    success
+  }
+}

@@ -1,0 +1,25 @@
+query collectionsByAddress($wallet_address: String!) {
+  collectionsByAddress(wallet_address: $wallet_address) {
+    id
+    name
+    slug
+    description
+    logo
+    royalties
+    payout_address
+    contract_address
+    description
+    category_id
+    display_theme
+    feature_image
+    banner_image
+    status
+    _count {
+      items
+    }
+    user {
+      id
+      name
+    }
+  }
+}

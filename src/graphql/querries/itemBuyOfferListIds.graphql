@@ -1,0 +1,6 @@
+query itemBuyOfferListIds($item_id: Int!) {
+  itemBuyOfferList(item_id: $item_id) {
+    id
+    uid
+  }
+}

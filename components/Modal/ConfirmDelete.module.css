@@ -1,0 +1,136 @@
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-3);
+}
+
+.confirm-delete p {
+  font-size: 1.6rem;
+}
+
+.learnmore {
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 500;
+  color: rgb(112, 122, 131);
+}
+
+.disclosure {
+  border: 1px solid var(--border-3);
+  border-bottom: 0;
+  border-radius: 0;
+  overflow: hidden;
+  max-width: 500px;
+  margin: auto;
+}
+.disclosure:first-of-type {
+  border-radius: 1rem 1rem 0 0;
+}
+.disclosure:last-of-type {
+  border-radius: 0 0 1rem 1rem;
+  border: 1px solid var(--border-3);
+}
+
+.panelButton {
+  border: 0;
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  background: transparent;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panelBody {
+  padding: 1.5rem 2.5rem;
+  background: var(--background-color-5);
+  font-size: 1.6rem;
+}
+
+.panelBody span {
+  display: block;
+  font-size: 1.4rem;
+}
+
+.panelBody p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--text-color-7);
+}
+
+.panelBody a {
+  font-weight: 500;
+  transition: all 0.4s;
+}
+.topSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.topSection a {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 500;
+  padding: 1.25rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: none;
+  transition: all 0.4s;
+}
+.topSection button {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 500;
+  padding: 1.25rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: none;
+  transition: all 0.4s;
+  background-color: transparent;
+}
+
+.topSection button:hover {
+  box-shadow: 6px 6px 35px rgb(166 166 166 / 25%);
+}
+
+.topSection a:hover {
+  box-shadow: 6px 6px 35px rgb(166 166 166 / 25%);
+}
+
+.btFilled {
+  background: var(--primary-color);
+  color: var(--text-color-3) !important;
+}
+.blockchainSelect {
+  line-height: 1;
+}
+.blockchainSelect .blockchainSelectImg {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+.btnsolid {
+  background: var(--primary-color) !important;
+  color: var(--text-color-3) !important;
+  cursor: pointer;
+}
+.blockchainSelect .blockchainSelectText {
+  display: inline-block;
+  margin-left: 10px;
+}
+.amoutInput {
+  cursor: text;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 1px solid rgb(229, 232, 235);
+  width: 100%;
+  height: 50px;
+
+  padding: 10px 20px;
+}

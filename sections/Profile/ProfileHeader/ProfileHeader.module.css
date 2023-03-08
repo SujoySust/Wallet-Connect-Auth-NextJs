@@ -1,0 +1,155 @@
+.ProfileHeader {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+.ProfileHeaderContent {
+  display: flex;
+  align-items: center;
+}
+
+.profileImage {
+  cursor: pointer;
+  width: 20rem;
+  height: 20rem !important;
+  margin-right: 3rem;
+  object-fit: cover;
+  border: 0.5rem solid var(--border-1);
+  border-radius: 50%;
+  box-shadow: 6px 6px 35px rgb(166 166 166 / 25%);
+}
+.social {
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.social:hover {
+  color: inherit;
+}
+.socialLink:hover {
+  background: var(--background-color-2) !important;
+  color: inherit;
+  box-shadow: 6px 6px 35px rgb(166 166 166 / 25%);
+}
+.profileImageModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImageModal img {
+  border-radius: 1.5rem;
+}
+
+.profileInfo h3 {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.profileInfo p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--text-color-7);
+}
+
+.profileInfo sup {
+  color: var(--p4);
+  font-size: 2rem;
+  position: relative;
+  top: -0.5rem;
+  right: 0.25rem;
+}
+
+.buttons {
+  position: relative;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  color: var(--text-color-7);
+  border: 0;
+  background: transparent;
+  transition: all 0.4s;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 5rem;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 5;
+  width: max-content;
+  padding: 0.5rem 0;
+  background: var(--background-color);
+  border: 1px solid var(--border-3);
+  border-radius: 1.5rem;
+}
+
+.dropdownItem {
+  color: var(--text-color-7);
+  background: transparent;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  border: 0;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dropdownItem:hover {
+  color: var(--text-color);
+}
+
+.dropdownItem svg {
+  margin-right: 0.75rem;
+  font-size: 2rem;
+}
+
+.lastChild {
+  border-radius: 0 1.5rem 1.5rem 0;
+}
+
+@media (max-width: 767px) {
+  .ProfileHeader {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ProfileHeaderContent {
+    align-items: flex-start;
+  }
+
+  .profileImage {
+    width: 12.5rem;
+    height: 12.5rem !important;
+    margin-right: 1rem;
+  }
+
+  .profileInfo p {
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    order: 0;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    /* padding: 0.5rem 1.5rem;
+    padding-bottom: 0.75rem;
+    font-size: 2rem; */
+  }
+}
