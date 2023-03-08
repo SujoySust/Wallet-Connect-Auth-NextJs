@@ -1,7 +1,0 @@
-query checkUniqueItem($name: String!, $id: Int) {
-  checkUniqueItem(name: $name, id: $id) {
-    code
-    message
-    success
-  }
-}

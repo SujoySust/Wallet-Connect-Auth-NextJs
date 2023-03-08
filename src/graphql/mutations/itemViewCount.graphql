@@ -1,5 +1,0 @@
-mutation itemViewCount($item_id: Int!) {
-  itemViewCount(item_id: $item_id){
-    count
-  }
-}

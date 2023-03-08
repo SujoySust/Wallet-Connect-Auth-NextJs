@@ -2,12 +2,8 @@ import classes from "./Settings.module.css";
 import { Tab } from "@headlessui/react";
 import { BiUserCircle, BiShieldQuarter } from "react-icons/bi";
 import { FiBell, FiDollarSign } from "react-icons/fi";
-import { MdOutlineLocalOffer } from "react-icons/md";
 import { ProfileContent } from "./Profile";
-import { NotificationsSettings } from "./Notifications";
-import { OffersSettings } from "./Offers";
 import { AccountSupportSettings } from "./AccountSupport";
-import { EarningsSettings } from "./Earnings";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 export const SettingsContent = ({ userData }: any) => {
@@ -23,28 +19,10 @@ export const SettingsContent = ({ userData }: any) => {
       content: <ProfileContent userData={userData} />,
     },
     {
-      icon: <FiBell />,
-      title: t("Notifications"),
-      tab: t("notifications"),
-      content: <NotificationsSettings userData={userData} />,
-    },
-    // {
-    //   icon: <MdOutlineLocalOffer />,
-    //   title: "Offers",
-    //   tab: "offers",
-    //   content: <OffersSettings />,
-    // },
-    {
       icon: <BiShieldQuarter />,
       title: t("Account Support"),
       tab: t("account-support"),
       content: <AccountSupportSettings />,
-    },
-    {
-      icon: <FiDollarSign />,
-      title: t("Earnings"),
-      tab: t("earnings"),
-      content: <EarningsSettings />,
     },
   ];
 

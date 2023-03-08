@@ -5,7 +5,6 @@ import "../styles/css/bootstrap.min.css";
 import "../styles/css/style.css";
 // import "../styles/css/responsive.css";
 import "../styles/css/nprogress.css";
-import { getCookie } from "cookies-next";
 import { AppPropsWithLayout } from "../src/types";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";

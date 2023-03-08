@@ -1,6 +1,0 @@
-mutation itemReMint($activity_id: Int!){
-    itemReMint(activity_id: $activity_id){
-        success
-        message
-    }
-}

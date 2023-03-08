@@ -11,10 +11,5 @@ query getAccountByAddress($wallet_address: String!) {
     username
     wallet_address
     is_email_verified
-    social_links {
-      id
-      instagram_link
-      website_link
-    }
   }
 }

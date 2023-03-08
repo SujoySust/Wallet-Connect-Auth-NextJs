@@ -1,8 +1,0 @@
-query getCategories($status: Int) {
-  getCategories(status: $status) {
-    id
-    image
-    title
-    status
-  }
-}

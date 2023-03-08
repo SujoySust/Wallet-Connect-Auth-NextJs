@@ -13,7 +13,7 @@ const BasicLayoutNoFooter = ({children,data}: any) => {
         <link rel="icon" href={data?.favicon_logo || "/favicon.ico"}/>
       </Head>
 
-      <HeaderSection settings={data}/>
+      <HeaderSection/>
 
       {children}
 

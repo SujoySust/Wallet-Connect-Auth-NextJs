@@ -10,7 +10,7 @@ import {
   SETTINGS_GROUP_LOGO,
   SETTINGS_GROUP_FOOTER,
 } from "src/helpers/slugcontanst";
-import { getSettingsData } from "src/ssr/data";
+
 const EmailVerify = ({ data }: any) => {
   const { t } = useTranslation("common");
   const { settings } = data;
@@ -75,16 +75,7 @@ const EmailVerify = ({ data }: any) => {
 
 export async function getServerSideProps(context: any) {
   const lang = context.locale || "en";
-  const settings: any = await getSettingsData(
-    [SETTINGS_GROUP_FOOTER, SETTINGS_GROUP_GENERAL, SETTINGS_GROUP_LOGO],
-    {
-      lang: lang,
-    }
-  );
-
-  const data = {
-    settings,
-  };
+  const data = {};
   return {
     props: {
       data: data,

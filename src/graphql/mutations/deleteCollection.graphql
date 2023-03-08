@@ -1,7 +1,0 @@
-mutation deleteCollection($id: Int!){
-    deleteCollection(collectionId: $id){
-        success
-        message
-        code
-    }
-}

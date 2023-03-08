@@ -1,12 +1,17 @@
+import { useWeb3React } from "@web3-react/core";
+import useWallet, { walletConnected } from "hooks/useWallet";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { FiLogOut } from "react-icons/fi";
 import { absPath } from "../../../src/helpers/functions";
 import classes from "./Nav.module.css";
 
 const Nav = () => {
   const { t } = useTranslation("common");
   // const t = (s: string) => s;
+  const { disConnectWallet } = useWallet();
+  const { active } = useWeb3React();
 
   const { pathname } = useRouter();
 
@@ -17,96 +22,23 @@ const Nav = () => {
           <Link href={absPath("")}>
             <a className={pathname === "/" ? "active" : ""}>{t("Home")}</a>
           </Link>
-        </li>
-
-        <li>
-          <Link href={absPath("marketplace")}>
-            <a className={pathname === "/marketplace" ? "active" : ""}>
-              {t("Marketplace")}
+          <Link href={absPath("profile")}>
+            <a>
+              <i className="fas fa-user" /> {t("Profile")}
             </a>
           </Link>
-        </li>
-
-        <li>
-          <Link href={absPath("sell-offers")}>
-            <a className={pathname === "/sell-offers" ? "active" : ""}>
-              {t("Sale Offers")}
+          <Link href={absPath("settings")}>
+            <a>
+              <i className="fas fa-cog" /> {t("Settings")}
             </a>
           </Link>
-        </li>
-
-        {/* collections */}
-        <li className="has-children-menu">
-          <a href="#">
-            {t("Collections")} <i className="fas fa-chevron-down"></i>
-          </a>
-          <ul className="sub-menu">
-            <li>
-              <Link href={absPath("collections/create")}>
-                <a
-                  className={pathname === "/collections/create" ? "active" : ""}
-                >
-                  {t("Create Collection")}
-                </a>
-              </Link>
-            </li>
-
-            <li>
-              <Link href={absPath("collections")}>
-                <a className={pathname === "/collections" ? "active" : ""}>
-                  {t("My Collections")}
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </li>
-
-        {/* assets */}
-        <li className="has-children-menu">
-          <a href="#">
-            {t("Assets")} <i className="fas fa-chevron-down"></i>
-          </a>
-          <ul className="sub-menu">
-            <li>
-              <Link href={absPath("assets/create")}>
-                <a className={pathname === "/assets/create" ? "active" : ""}>
-                  {t("Create Asset")}
-                </a>
-              </Link>
-            </li>
-
-            <li>
-              <Link href={absPath("assets")}>
-                <a className={pathname === "/assets" ? "active" : ""}>
-                  {t("Explore Assets")}
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </li>
-
-        {/*Stats*/}
-        <li className="has-children-menu">
-          <a href="#">
-            {t("Stats")} <i className="fas fa-chevron-down"></i>
-          </a>
-          <ul className="sub-menu">
-            <li>
-              <Link href={absPath("rankings")}>
-                <a className={pathname === "/rankings" ? "active" : ""}>
-                  {t("Rankings")}
-                </a>
-              </Link>
-            </li>
-
-            <li>
-              <Link href={absPath("activity")}>
-                <a className={pathname === "/activity" ? "active" : ""}>
-                  {t("Activity")}
-                </a>
-              </Link>
-            </li>
-          </ul>
+          {walletConnected(active) && (
+                <button type="button" className="btn btn-danger" onClick={disConnectWallet}>
+                {" "}
+                <FiLogOut className="mr-3" />
+                {t("Logout")}
+              </button>
+              )}
         </li>
       </ul>
     </nav>

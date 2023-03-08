@@ -4,13 +4,6 @@ import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useToasts } from "react-toast-notifications";
-import {
-  SETTINGS_GROUP_APPLICATION,
-  SETTINGS_GROUP_FOOTER,
-  SETTINGS_GROUP_GENERAL,
-  SETTINGS_GROUP_LOGO,
-  SETTINGS_GROUP_SOCIAL,
-} from "src/helpers/slugcontanst";
 import { RootState } from "src/store";
 import {
   setNativeToken,
@@ -18,14 +11,11 @@ import {
 } from "src/store/slices/paymentTokenSlice";
 import { setSupportedChains } from "src/store/slices/supportedChainsSlice";
 import useWallet, { walletConnected } from "../hooks/useWallet";
-import { getSupportedChainIds } from "../src/helpers/functions";
 import {
   getAccountByAddress,
   getBlockchainListForChainIds,
   getNativeNwrapTokenWithChainId,
-  getSettingsData,
 } from "../src/ssr/data";
-import { setSettings } from "../src/store/slices/settingsSlice";
 import {
   setUserData,
   setUserDataError,
@@ -55,14 +45,6 @@ const GeneralLayout = ({ children }) => {
 
   useEffect(() => {
     moment.locale(router?.locale);
-
-    getSettingsData([
-      SETTINGS_GROUP_APPLICATION,
-      SETTINGS_GROUP_GENERAL,
-      SETTINGS_GROUP_LOGO,
-      SETTINGS_GROUP_SOCIAL,
-      SETTINGS_GROUP_FOOTER,
-    ]).then((res) => dispatch(setSettings(res)));
 
     if (notInitialRenderOnLocaleChange.current) {
       router.push(router.asPath);

@@ -1,11 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import {
-  SETTINGS_GROUP_GENERAL,
-  SETTINGS_GROUP_LOGO,
-  SETTINGS_GROUP_FOOTER,
   SETTINGS_SLUG_APPLICATION_TITLE,
 } from "src/helpers/slugcontanst";
-import { getSettingsData } from "src/ssr/data";
 import MetaHeadSection from "../components/Meta/MetaHeadSection";
 import BasicLayout from "../layouts/basic.layout";
 import AddWalletComponent from "../sections/AddWallet";
@@ -39,16 +35,7 @@ const AddWallet = ({ data }: any) => {
 
 export async function getServerSideProps(context: any) {
   const lang = context.locale || "en";
-  const settings: any = await getSettingsData(
-    [SETTINGS_GROUP_FOOTER, SETTINGS_GROUP_GENERAL, SETTINGS_GROUP_LOGO],
-    {
-      lang: lang,
-    }
-  );
-
-  const data = {
-    settings,
-  };
+  const data = {};
   return {
     props: {
       data: data,

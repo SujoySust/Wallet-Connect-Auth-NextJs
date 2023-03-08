@@ -1,7 +1,0 @@
-mutation cancelTransfer($transfer_id: Int!) {
-  cancelTransfer(transfer_id: $transfer_id) {
-    code
-    success
-    message
-  }
-}

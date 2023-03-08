@@ -12,11 +12,11 @@ const BasicLayout = ({children,data}: any) => {
       />
       </Head>
 
-      <HeaderSection settings={data}/>
+      <HeaderSection/>
 
         {children}
 
-      <FooterSection settings={data}/>
+      <FooterSection/>
     </>
   );
 };

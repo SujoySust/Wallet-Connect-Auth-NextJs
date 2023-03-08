@@ -13,13 +13,5 @@ query getAccount($address_or_username: String!) {
     username
     is_email_verified
     wallet_address
-    social_links {
-      instagram_link
-      website_link
-      discord_link
-      facebook_link
-      linkedin_link
-      medium_link
-    }
   }
 }

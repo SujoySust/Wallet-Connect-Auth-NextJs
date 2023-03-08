@@ -1,4 +1,4 @@
-import { getBlockchainListForChainIds, syncItemOwner } from "src/ssr/data";
+import { getBlockchainListForChainIds, } from "src/ssr/data";
 import { FilterItemType } from "src/types";
 import ServicesConfig from "../config/services";
 import { CHAIN_SLUG_MAPPING, itemEvents } from "./corearray";
@@ -196,21 +196,6 @@ export function getRandomNumber(length: number) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   return result;
-}
-
-export async function checkOwner(
-  contract: any,
-  token_id: number,
-  ownerAddress: string,
-  item_id: number
-): Promise<boolean> {
-  const owner = await contract.ownerOf(token_id);
-
-  if (owner != ownerAddress) {
-    syncItemOwner(item_id);
-    return false;
-  }
-  return true;
 }
 
 // for sell -> settings[SETTINGS_BUY_SELL_FEE_PERCENTAGE], item.collection.royalties, itemPrice

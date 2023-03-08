@@ -1,8 +1,0 @@
-query getSettingsData($optionGroup: [String!]) {
-  getSettingsData(optionGroup: $optionGroup) {
-    id
-    option_key
-    option_group
-    option_value
-  }
-}

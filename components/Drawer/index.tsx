@@ -10,7 +10,6 @@ export const Drawer = ({
   onClose,
   children,
   onRightSide,
-  setting,
 }: any) => {
   const [portalElement, setPortalElement] = useState<any>();
   const [isBrowser, setIsBrowser] = useState(false);
@@ -38,7 +37,6 @@ export const Drawer = ({
           <Dialog.Title className={classes.title}>
             <img
               src={
-                setting?.app_logo_small ??
                 imageAsset("assets/images/logo.png")
               }
               alt="logo"

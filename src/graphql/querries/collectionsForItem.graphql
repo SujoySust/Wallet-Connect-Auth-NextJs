@@ -1,8 +1,0 @@
-query collectionsForItem($wallet_address: String!) {
-  collectionsForItem(wallet_address: $wallet_address) {
-    id
-    name
-    slug
-    logo
-  }
-}
